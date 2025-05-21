@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brown Themed Portfolio</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f3e5ab;
+      color: #4b2e2e;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #8b5e3c;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 15px 0;
+      z-index: 999;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    .navbar a:hover {
+      background-color: #a6714b;
+      border-radius: 5px;
+    }
+
+    /* Spacer to prevent overlap with fixed nav */
+    .spacer {
+      height: 60px;
+    }
+
+    /* Centered Image with Rounded Edges & Filter */
+    .centered-img {
+      display: block;
+      margin: 20px auto;
+      filter: sepia(0.6);
+      border-radius: 20px;
+      width: 300px;
+    }
+
+    /* Table Styling */
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 80%;
+    }
+
+    th {
+      background-color: #d2b48c;
+      font-weight: bold;
+    }
+
+    th, td {
+      border: 2px solid #8b5e3c;
+      padding: 10px;
+      text-align: left;
+    }
+
+    /* Text Over Image */
+    .img-text-container {
+      position: relative;
+      text-align: center;
+      color: white;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .img-text-container img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .img-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    /* Two Column Layout */
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .column {
+      width: 48%;
+      height: 200px;
+      background-color: #e6d3b3;
+      color: #4b2e2e;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Paragraph Hover Effect */
+    p:hover {
+      color: #8b5e3c;
+      background-color: #f5deb3;
+    }
+
+    /* Image Overlay Fade */
+    .overlay-container {
+      position: relative;
+      width: 300px;
+      margin: 20px auto;
+    }
+
+    .overlay-container img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .overlay-container .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(139, 94, 60, 0.6);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      border-radius: 10px;
+    }
+
+    .overlay-container:hover .overlay {
+      opacity: 1;
+    }
+
+    /* Video Styling */
+    .video-section {
+      width: 80%;
+      margin: 20px auto;
+      position: relative;
+    }
+
+    .video-section video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .video-overlay-text {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      color: white;
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px;
+      font-size: 1.5em;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #8b5e3c;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+  </div>
+
+  <div class="spacer"></div>
+
+  <!-- Centered Filtered Image -->
+  <img class="centered-img" src="https://cdn.pixabay.com/photo/2016/11/19/12/15/bicycle-1838972_1280.jpg" alt="Centered Image">
+
+  <!-- Table with styles -->
+  <table id="about">
+    <tr>
+      <th>Name</th>
+      <th>Skill</th>
+    </tr>
+    <tr>
+      <td>Mohamed Khalil</td>
+      <td>HTML</td>
+    </tr>
+    <tr>
+      <td>Mohamed Khalil</td>
+      <td>CSS</td>
+    </tr>
+  </table>
+
+  <!-- Text over image -->
+  <div class="img-text-container">
+    <img src="https://cdn.pixabay.com/photo/2013/05/13/06/18/forest-110900_1280.jpg" alt="Image with Text">
+    <div class="img-text">Text Over This Image</div>
+  </div>
+
+  <!-- Two column layout -->
+  <div class="columns">
+    <div class="column">
+      Column One Text
+    </div>
+    <div class="column">
+      Column Two Text
+    </div>
+  </div>
+
+  <!-- Paragraph with hover effect -->
+  <p>This paragraph will change on hover.</p>
+
+  <!-- Image Overlay Fade -->
+  <div class="overlay-container">
+    <img src="https://cdn.pixabay.com/photo/2017/02/07/09/02/wood-2045380_1280.jpg" alt="Overlay Image">
+    <div class="overlay"></div>
+  </div>
+
+  <!-- Autoplay muted looping video -->
+  <div class="video-section">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2023/10/25/186514-878145197_tiny.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="video-overlay-text">Overlay Text on Video</div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 My Css Portfolio
+  </footer>
+
+</body>
+</html>
